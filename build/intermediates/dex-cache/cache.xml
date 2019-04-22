@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/a75659fe22275eed8d88a32b15e5031f077980f5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_3c940364db1dd2f0fb10f87309b435816d848906.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/ce190795d7fc7c856d12f41d9134412a2993d8b0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_b559878c505b777dcd230251f432eff1a42e0008.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_ed9cfaea16e926d70f140e32b12e7c4d0fb0426b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/2836510946ef1ad14ce381b6a36d94c1cb4e6c00/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_0ce32a27ce38fef7be088536813df6aaeaaa3b27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/fe46be34b4f58e397edafe66fcffc2566a8d71e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_5dd1acf44528d963047344605e591fa614f85876.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/1f2fc14f4fa6f5b1284380b0da36dd094fbb654d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_b4e44572e7efcc5753369f1ee3e63814a62608d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/05570328bf5fc8e8d1c6d5a10c4a8c4a9af2e737/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_6df5fa8e34c63849fce08e8ade391dd27df50aa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_84c5db78e183e5eb15e6078c3b98c26a191f26ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/db0d342c0a3ab736fa2e2d46d5bd01bf6fcec630/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_8035ecac544e9df12f5ede9d4a2a0ca6c04168fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/android/databinding/baseLibrary/2.3.3/baseLibrary-2.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="eb3399988a52099b0127e27fb5bed666eca86ace">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/baseLibrary-2.3.3_a13c89973c1c8bce4f7e9a2f1b7ba7e93f86f6c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/11d64fa5fd8902c1fe70d43f631c35c53c49f908/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_564ffdc0b84ef34bd69b6ed02037d95ec9df68d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/956f64a26d66bb6137f16a9b60a442db4e47b6c0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_9b2fa9a76f8504c9906aed25f30b0eb5a3bacf14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/213ac2ba5a6cfefb5f8c64b4a46cf972be7715dd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_fe0aac367b16cf09a4b4628c745019f8037230e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/21cfa92716c9bf676c3d699bd9e746641397c0f3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_e8b77416e40942fd0647f88881f6df5603a5ede9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedromillanreyes/.android/build-cache/af3fe7ea44317bf1dc607e4de16e431aa1e778d4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
+        <dex dex="/Users/pedromillanreyes/Personal/GetFitAgility/app/build/intermediates/pre-dexed/debug/classes_39e47cb611f09d2153ba59ed44573212d032380b.jar" />
+    </item>
+
+</items>

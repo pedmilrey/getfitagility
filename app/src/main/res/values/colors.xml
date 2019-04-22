@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c21d33</color>
+    <color name="colorPrimaryDark">#8c2936</color>
+    <color name="colorAccent">#292223</color>
+
+    <!--Disk Colors-->
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="orange">#fc883a</color>
+    <color name="yellow">#e6df60</color>
+    <color name="red">#fc5947</color>
+    <color name="blue">#5a9ed6</color>
+    <color name="green">#91e06c</color>
+</resources>
