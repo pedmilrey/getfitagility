@@ -64,6 +64,7 @@ public class TapAutomaticPresenter {
         view.hideRestartButton();
         view.showStartButton();
         view.hideNumber();
+        view.stopSound();
     }
 
     public void onStartButtonClicked() {
@@ -95,6 +96,7 @@ public class TapAutomaticPresenter {
         Disk randomDisk;
         Disk complementaryDisk;
         view.showNextText();
+        view.playSound();
         view.updateCounter(counter);
         switch (exerciseLevel) {
             case LEVEL_1:
@@ -139,5 +141,10 @@ public class TapAutomaticPresenter {
                 return R.color.black;
         }
 
+    }
+
+    public void onBackPressed() {
+        view.stopSound();
+        view.goBack();
     }
 }

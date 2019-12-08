@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,6 +28,7 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
     private ActivityTapAutomaticBinding binding;
     private TapAutomaticPresenter presenter;
     private Timer timer;
+    private MediaPlayer mediaPlayer;
 
     public static Intent getIntent(Context context, ExerciseLevel mode, int seconds) {
         Intent intent = new Intent(context, TapAutomaticActivity.class);
@@ -60,7 +62,7 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                presenter.onBackPressed();
             }
         });
     }
@@ -137,6 +139,25 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
     }
 
     @Override
+    public void playSound() {
+        if(mediaPlayer != null){
+            stopSound();
+        }
+        mediaPlayer = MediaPlayer.create(this, R.raw.tonebeep);
+        mediaPlayer.start();
+    }
+
+    @Override
+    public void stopSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.reset();
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
     public void updateCounter(int counter) {
         binding.counter.setText(String.valueOf(counter));
     }
@@ -178,7 +199,26 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
 
     @Override
     public void onBackPressed() {
+        presenter.onBackPressed();
+
+    }
+
+    @Override
+    public void goBack() {
         finish();
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if(mHandler != null) {
+            mHandler = null;
+        }
+        if ((timer != null)){
+            timer.cancel();
+            timer = null;
+        }
     }
 }
