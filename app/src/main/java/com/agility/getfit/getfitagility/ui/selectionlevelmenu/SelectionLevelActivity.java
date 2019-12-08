@@ -13,6 +13,7 @@ import com.agility.getfit.getfitagility.databinding.ActivitySelectionBinding;
 import com.agility.getfit.getfitagility.models.ExerciseLevel;
 import com.agility.getfit.getfitagility.models.ExerciseMode;
 import com.agility.getfit.getfitagility.ui.tap.TapActivity;
+import com.agility.getfit.getfitagility.ui.tapautomatic.TapAutomaticActivity;
 
 public class SelectionLevelActivity extends AppCompatActivity implements SelectionLevelView {
 
@@ -70,10 +71,12 @@ public class SelectionLevelActivity extends AppCompatActivity implements Selecti
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) { }
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
     }
 
@@ -89,8 +92,14 @@ public class SelectionLevelActivity extends AppCompatActivity implements Selecti
 
 
     @Override
-    public void goToExerciseScreen(ExerciseLevel exerciseLevel) {
+    public void goToManualExerciseScreen(ExerciseLevel exerciseLevel) {
         startActivity(TapActivity.getIntent(this, exerciseLevel));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    @Override
+    public void goToAutoExerciseScreen(ExerciseLevel exerciseLevel) {
+        startActivity(TapAutomaticActivity.getIntent(this, exerciseLevel, Integer.valueOf(binding.seekbarValue.getText().toString())));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 

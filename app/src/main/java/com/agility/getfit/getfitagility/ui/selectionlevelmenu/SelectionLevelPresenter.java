@@ -18,15 +18,26 @@ public class SelectionLevelPresenter {
     }
 
     void onButton1Clicked() {
-        view.goToExerciseScreen(ExerciseLevel.LEVEL_1);
+        if (mode == ExerciseMode.AUTO){
+            view.goToAutoExerciseScreen(ExerciseLevel.LEVEL_1);
+        } else {
+            view.goToManualExerciseScreen(ExerciseLevel.LEVEL_1);
+        }
     }
 
     void onButton2Clicked() {
-        view.goToExerciseScreen(ExerciseLevel.LEVEL_2);
-    }
+        if (mode == ExerciseMode.AUTO){
+            view.goToAutoExerciseScreen(ExerciseLevel.LEVEL_2);
+        } else {
+            view.goToManualExerciseScreen(ExerciseLevel.LEVEL_2);
+        }    }
 
     void onButton3Clicked() {
-        view.goToExerciseScreen(ExerciseLevel.LEVEL_3);
+        if (mode == ExerciseMode.AUTO){
+            view.goToAutoExerciseScreen(ExerciseLevel.LEVEL_3);
+        } else {
+            view.goToManualExerciseScreen(ExerciseLevel.LEVEL_3);
+        }
     }
 
     public void start() {
