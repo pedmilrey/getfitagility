@@ -8,4 +8,6 @@ import com.agility.getfit.getfitagility.models.ExerciseLevel;
 
 public interface SelectionLevelView {
     void goToExerciseScreen(ExerciseLevel exerciseLevel);
+
+    void showSeekbar();
 }

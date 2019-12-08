@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.SeekBar;
 
 import com.agility.getfit.getfitagility.R;
 import com.agility.getfit.getfitagility.databinding.ActivitySelectionBinding;
@@ -32,7 +33,7 @@ public class SelectionLevelActivity extends AppCompatActivity implements Selecti
         super.onCreate(savedInstanceState);
         initPresenter();
         initView();
-
+        presenter.start();
     }
 
     private void initView() {
@@ -61,10 +62,29 @@ public class SelectionLevelActivity extends AppCompatActivity implements Selecti
                 presenter.onButton3Clicked();
             }
         });
+
+        binding.seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                binding.seekbarValue.setText(String.valueOf(i));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) { }
+        });
     }
 
     private void initPresenter() {
-        presenter = new SelectionLevelPresenter(this);
+        if (getIntent() != null) {
+            ExerciseMode mode = ExerciseMode.values()[getIntent().getIntExtra(MODE_BUNDLE, 0)];
+            presenter = new SelectionLevelPresenter(this, mode);
+        } else {
+            throw new IllegalArgumentException("missing MODE_BUNDLE");
+        }
+
     }
 
 
@@ -72,5 +92,10 @@ public class SelectionLevelActivity extends AppCompatActivity implements Selecti
     public void goToExerciseScreen(ExerciseLevel exerciseLevel) {
         startActivity(TapActivity.getIntent(this, exerciseLevel));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    @Override
+    public void showSeekbar() {
+        binding.seekbarGroup.setVisibility(View.VISIBLE);
     }
 }
