@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class TapActivity extends AppCompatActivity implements TapView {
 
     private ActivityTapBinding binding;
     private TapPresenter presenter;
+    private MediaPlayer mediaPlayer;
 
     public static Intent getIntent(Context context, ExerciseLevel mode) {
         Intent intent = new Intent(context, TapActivity.class);
@@ -52,7 +54,7 @@ public class TapActivity extends AppCompatActivity implements TapView {
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                presenter.onBackPressed();
             }
         });
     }
@@ -156,6 +158,30 @@ public class TapActivity extends AppCompatActivity implements TapView {
 
     @Override
     public void onBackPressed() {
+        presenter.onBackPressed();
+    }
+
+    @Override
+    public void playSound() {
+        if (mediaPlayer != null) {
+            stopSound();
+        }
+        mediaPlayer = MediaPlayer.create(this, R.raw.tonebeep);
+        mediaPlayer.start();
+    }
+
+    @Override
+    public void stopSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.reset();
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    public void goBack() {
         finish();
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }

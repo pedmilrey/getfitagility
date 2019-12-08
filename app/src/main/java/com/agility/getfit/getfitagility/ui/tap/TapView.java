@@ -34,4 +34,11 @@ public interface TapView {
     void updateCounter(int counter);
 
     void hideCounter();
+
+    void playSound();
+
+    void stopSound();
+
+    void goBack();
+
 }
