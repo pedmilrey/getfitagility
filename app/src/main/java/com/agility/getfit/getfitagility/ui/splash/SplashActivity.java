@@ -1,12 +1,11 @@
 package com.agility.getfit.getfitagility.ui.splash;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.agility.getfit.getfitagility.R;
-import com.agility.getfit.getfitagility.ui.selectionMenu.SelectionActivity;
+import com.agility.getfit.getfitagility.ui.modeselection.ModeSelectionActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -27,8 +26,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void goToSelectionScreen() {
-        Intent intent = new Intent(this, SelectionActivity.class);
-        startActivity(intent);
+        startActivity(ModeSelectionActivity.Companion.getIntent(this));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         finish();
     }

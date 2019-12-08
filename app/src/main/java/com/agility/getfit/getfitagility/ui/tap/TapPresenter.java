@@ -5,7 +5,7 @@ import android.util.Pair;
 
 import com.agility.getfit.getfitagility.R;
 import com.agility.getfit.getfitagility.models.Disk;
-import com.agility.getfit.getfitagility.ui.selectionMenu.SelectionPresenter;
+import com.agility.getfit.getfitagility.models.ExerciseLevel;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,9 +14,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import static com.agility.getfit.getfitagility.ui.selectionMenu.SelectionPresenter.LEVEL_1;
-import static com.agility.getfit.getfitagility.ui.selectionMenu.SelectionPresenter.LEVEL_2;
-import static com.agility.getfit.getfitagility.ui.selectionMenu.SelectionPresenter.LEVEL_3;
 import static com.agility.getfit.getfitagility.ui.tap.TapActivity.LEVEL_BUNDLE;
 
 /**
@@ -26,7 +23,7 @@ import static com.agility.getfit.getfitagility.ui.tap.TapActivity.LEVEL_BUNDLE;
 public class TapPresenter {
 
     private TapView view;
-    private @SelectionPresenter.ExerciseLevel int mode;
+    private ExerciseLevel exerciseLevel;
 
     private Map<Integer, Disk> diskMap = new HashMap<>();
     private int counter = 0;
@@ -38,7 +35,7 @@ public class TapPresenter {
     public void start(Intent intent) {
         initDiskMap();
         //noinspection ResourceType
-        mode = intent.getIntExtra(LEVEL_BUNDLE, 0);
+        exerciseLevel = ExerciseLevel.values()[intent.getIntExtra(LEVEL_BUNDLE, 0)];
     }
 
     private void initDiskMap() {
@@ -89,19 +86,19 @@ public class TapPresenter {
         return diskMap.get(randomDisk);
     }
 
-    private Pair<Disk, Disk> getTwoRandomDisks(){
+    private Pair<Disk, Disk> getTwoRandomDisks() {
         List<Integer> keys = new ArrayList(diskMap.keySet());
         Collections.shuffle(keys);
         return new Pair<>(diskMap.get(keys.get(0)), diskMap.get(keys.get(1)));
 
     }
 
-    private void showNextScreen(){
+    private void showNextScreen() {
         Disk randomDisk;
         Disk complementaryDisk;
         view.showNextText();
         view.updateCounter(counter);
-        switch (mode){
+        switch (exerciseLevel) {
             case LEVEL_1:
                 randomDisk = getRandomDisk();
                 view.setBackgroundColor(R.color.white);
@@ -127,9 +124,9 @@ public class TapPresenter {
         }
     }
 
-    private int getDiskColor(Disk disk){
+    private int getDiskColor(Disk disk) {
         int number = disk.getNumber();
-        switch (number){
+        switch (number) {
             case 1:
                 return R.color.orange;
             case 2:

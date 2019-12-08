@@ -12,22 +12,20 @@ import android.view.View;
 
 import com.agility.getfit.getfitagility.R;
 import com.agility.getfit.getfitagility.databinding.ActivityTapBinding;
-import com.agility.getfit.getfitagility.ui.selectionMenu.SelectionPresenter;
+import com.agility.getfit.getfitagility.models.ExerciseLevel;
 
-public class TapActivity extends AppCompatActivity implements TapView{
+public class TapActivity extends AppCompatActivity implements TapView {
 
     public static final String LEVEL_BUNDLE = "level_bundle";
 
     private ActivityTapBinding binding;
     private TapPresenter presenter;
 
-    public static Intent getIntent(Context context, @SelectionPresenter.ExerciseLevel int mode) {
+    public static Intent getIntent(Context context, ExerciseLevel mode) {
         Intent intent = new Intent(context, TapActivity.class);
-        intent.putExtra(LEVEL_BUNDLE, mode);
+        intent.putExtra(LEVEL_BUNDLE, mode.ordinal());
         return intent;
-
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +56,9 @@ public class TapActivity extends AppCompatActivity implements TapView{
             }
         });
     }
+
     @Override
-    public void startListeners(){
+    public void startListeners() {
         binding.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
