@@ -128,15 +128,15 @@ public class TapAutomaticPresenter {
         int number = disk.getNumber();
         switch (number) {
             case 1:
-                return R.color.orange;
+                return R.color.color1;
             case 2:
-                return R.color.yellow;
+                return R.color.color2;
             case 3:
-                return R.color.red;
+                return R.color.color3;
             case 4:
-                return R.color.blue;
+                return R.color.color4;
             case 5:
-                return R.color.green;
+                return R.color.color5;
             default:
                 return R.color.black;
         }

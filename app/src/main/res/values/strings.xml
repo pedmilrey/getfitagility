@@ -6,4 +6,6 @@
     <string name="button_auto">Auto</string>
     <string name="button_manual">Manual</string>
     <string name="sign_manuel_gordillo">by Manuel Gordillo</string>
+    <string name="restart">Restart</string>
+    <string name="back">Back</string>
 </resources>
