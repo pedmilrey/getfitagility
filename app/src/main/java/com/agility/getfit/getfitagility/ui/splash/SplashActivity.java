@@ -2,7 +2,8 @@ package com.agility.getfit.getfitagility.ui.splash;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.agility.getfit.getfitagility.R;
 import com.agility.getfit.getfitagility.ui.modeselection.ModeSelectionActivity;

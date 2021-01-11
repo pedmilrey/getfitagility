@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -57,39 +57,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-        <android.support.v7.widget.AppCompatSeekBar
+        <androidx.appcompat.widget.AppCompatSeekBar
             android:id="@+id/seekbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
             android:max="10"
-            android:progress="1"
             android:min="1"
+            android:progress="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3"/>
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/seekbar_value"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="1"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:text="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/seekbar"
             tools:text="2" />
 
-        <android.support.constraint.Group
-            app:constraint_referenced_ids="seekbar,seekbar_value"
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/seekbar_group"
-            tools:visibility="visible"
-            android:visibility="gone"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="seekbar,seekbar_value"
+            tools:visibility="visible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -102,5 +102,5 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

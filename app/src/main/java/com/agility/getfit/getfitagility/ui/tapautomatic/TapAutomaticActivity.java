@@ -4,14 +4,15 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
 
 import com.agility.getfit.getfitagility.R;
 import com.agility.getfit.getfitagility.databinding.ActivityTapAutomaticBinding;
@@ -140,7 +141,7 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
 
     @Override
     public void playSound() {
-        if(mediaPlayer != null){
+        if (mediaPlayer != null) {
             stopSound();
         }
         mediaPlayer = MediaPlayer.create(this, R.raw.tonebeep);
@@ -213,10 +214,10 @@ public class TapAutomaticActivity extends AppCompatActivity implements TapAutoma
     protected void onDestroy() {
         super.onDestroy();
 
-        if(mHandler != null) {
+        if (mHandler != null) {
             mHandler = null;
         }
-        if ((timer != null)){
+        if ((timer != null)) {
             timer.cancel();
             timer = null;
         }

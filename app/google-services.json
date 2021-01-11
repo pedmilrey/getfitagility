@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1049727111568",
+    "project_id": "getfitagility",
+    "storage_bucket": "getfitagility.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049727111568:android:1544cd22d784b60e5ba315",
+        "android_client_info": {
+          "package_name": "com.agility.getfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049727111568-7out14dbi7t3es17q38f0a0fegrkcdkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agility.getfit",
+            "certificate_hash": "daa83f18de1f37666e534af903f776dcd2e36452"
+          }
+        },
+        {
+          "client_id": "1049727111568-ue1cbnf9a4o974v1q0jm9osojmnjcgtk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK8Dl-wxYilyIZCegtANC2ug-cDAAow_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049727111568-ue1cbnf9a4o974v1q0jm9osojmnjcgtk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
